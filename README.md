@@ -1,58 +1,42 @@
-🇮🇳 Marathi Sentiment Analysis using Machine Learning
-📌 Project Description
+# 🇮🇳 Marathi Sentiment Analysis using Machine Learning
 
-This project is a Marathi Language Sentiment Analysis System built using Machine Learning.
-The model classifies Marathi text into sentiment categories such as:
+## 📌 Project Overview
 
-✅ Positive
+This project is a Marathi Language Sentiment Analysis System built using Machine Learning.  
+It classifies Marathi text into:
 
-❌ Negative
+- ✅ Positive  
+- ❌ Negative  
+- ➖ Neutral  
 
-➖ Neutral
+The project demonstrates practical implementation of Natural Language Processing (NLP) techniques.
 
-The system uses NLP techniques like text preprocessing, vectorization, and classification algorithms to predict sentiment from user input.
+---
 
-This project demonstrates:
+## 🎯 Objectives
 
-Natural Language Processing (NLP)
+- Perform text preprocessing on Marathi data  
+- Convert text into numerical features using TF-IDF  
+- Train a Machine Learning classification model  
+- Predict sentiment for new user input  
+- Save trained model for future use  
 
-Text Cleaning
+---
 
-Feature Extraction (TF-IDF)
+## 🛠️ Tech Stack
 
-Model Training
+- Python  
+- Pandas  
+- NumPy  
+- Scikit-learn  
+- Pickle  
+- NLP Techniques  
 
-Model Deployment Structure
+---
 
-🚀 Features
+## 📂 Project Structure
 
-✔️ Marathi text preprocessing
 
-✔️ Stopword removal
-
-✔️ TF-IDF Vectorization
-
-✔️ Machine Learning model training
-
-✔️ Real-time sentiment prediction
-
-✔️ Saved trained model using Pickle
-
-🛠️ Tech Stack
-
-Python
-
-Scikit-learn
-
-Pandas
-
-NumPy
-
-Pickle
-
-NLP techniques
-
-📂 Project Structure
 marathi_sentiment_ml/
 │
 ├── data.csv
@@ -62,17 +46,93 @@ marathi_sentiment_ml/
 ├── sentiment_model.pkl
 ├── vectorizer.pkl
 ├── setup.py
+├── requirements.txt
 └── README.md
-⚙️ How It Works
 
-Load Marathi dataset
 
-Clean text data
+---
 
-Convert text into numerical format using TF-IDF
+## ⚙️ How the System Works
 
-Train ML model
+### 1️⃣ Data Loading
+Dataset containing Marathi sentences is loaded using Pandas.
 
-Save model & vectorizer
+### 2️⃣ Text Preprocessing
+- Lowercasing  
+- Removing special characters  
+- Cleaning unwanted symbols  
 
-Predict sentiment for new input
+### 3️⃣ Feature Extraction
+Text is converted into numerical vectors using **TF-IDF Vectorizer**.
+
+### 4️⃣ Model Training
+A Machine Learning classifier is trained using labeled data.
+
+### 5️⃣ Model Saving
+The trained model and vectorizer are saved using Pickle.
+
+### 6️⃣ Prediction
+New Marathi text input is passed to the model to predict sentiment.
+
+---
+
+## ▶️ How to Run the Project
+
+### 🔹 Step 1: Clone Repository
+
+
+git clone https://github.com/your-username/marathi-sentiment-analysis.git
+
+cd marathi-sentiment-analysis
+
+
+### 🔹 Step 2: Create Virtual Environment (Optional)
+
+
+python -m venv venv
+venv\Scripts\activate
+
+
+### 🔹 Step 3: Install Dependencies
+
+
+pip install -r requirements.txt
+
+
+If requirements.txt is not available:
+
+
+pip install pandas numpy scikit-learn
+
+
+### 🔹 Step 4: Train the Model
+
+
+python train_model.py
+
+
+### 🔹 Step 5: Run Prediction
+
+
+python test.py
+
+
+OR
+
+
+python predict.py
+
+
+---
+
+## 🧪 Example Usage
+
+```python
+from predict import analyze_sentiment
+
+result = analyze_sentiment("मला हा प्रोजेक्ट खूप छान वाटला")
+print("Sentiment:", result)
+Sample Output
+Input Text	Prediction
+मला हा प्रोजेक्ट खूप छान वाटला	Positive
+हे पूर्णपणे चुकीचे आहे	Negative
